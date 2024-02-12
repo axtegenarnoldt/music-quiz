@@ -103,7 +103,7 @@ body {
     
 }
 
-#question-box {
+#question {
     color: whitesmoke;
     font-size: 30px;
     padding: 10px;
@@ -116,15 +116,23 @@ body {
     border: none;
 }
 
+#start-btn {
+    font-size: 30px;
+}
+
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 15px;
 }
-
+/* styling for start en next buttons */
 .control-btn {
     padding: 20px;
     gap: 15px;
+}
+/* Hides next and awnser buttons */
+.hide {
+    display: none;
 }
 
 /* Footer */

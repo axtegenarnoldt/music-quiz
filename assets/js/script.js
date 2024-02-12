@@ -1,9 +1,8 @@
 const startButton = document.getElementById('start-btn')
 
+startButton.addEventListener('click', startGame)
+
 function startGame() {
-console.log('Started')
+console.log('started')
+startButton.classList.add('hide')
 }
-function nextQuestion()
-
-function selectAnswer()
-
