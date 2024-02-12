@@ -44,13 +44,18 @@ body {
     padding: 30px;
 }
 
-.game-area, p {
+.knowledge {
     padding: 30px;
 }
 
 .info {
     text-decoration: none;
     list-style: none;
+    padding: 20px;
+}
+
+/* Instructions */
+.instruction {
     padding: 20px;
 }
 
