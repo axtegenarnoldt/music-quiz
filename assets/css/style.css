@@ -1,0 +1,18 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,600;1,600&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'karla';
+}
+
+body {
+    background: url(../images/pexels-bakgrund.jpg.png) no-repeat center center/cover;
+}
+
+.heading {
+    color: whitesmoke;
+    font-size: 80px;
+    margin: 0;
+    text-align: center;
+}
