@@ -4,13 +4,15 @@
 * {
     box-sizing: border-box;
     font-family: 'karla';
+    padding: 0;
+    margin: 0;
 }
 
 body {
     background: url(../images/pexels-bakgrund.jpg.png) no-repeat center center/cover;
     display: flex;
     flex-direction: column;
-   
+    min-height: 100vh;
 }
 
 
@@ -61,4 +63,25 @@ body {
     border-radius: 5px;
     border: none;
     background-color: rgb(214, 98, 69);
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* socialmedia icons */
+#socialmedia {
+    text-align: center;
+    justify-content: space-evenly;
+    display: flex;
+    padding: 10px;
+    list-style-type: none;
+}
+
+#socialmedia i {
+    color: black;
+    font-size: 150%;
 }
