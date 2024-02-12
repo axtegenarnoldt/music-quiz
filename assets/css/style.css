@@ -1,13 +1,14 @@
 /* Google Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,600;1,600&display=swap');
 
+/* overrides default styles */
 * {
     box-sizing: border-box;
     font-family: 'karla';
     padding: 0;
     margin: 0;
 }
-
+/* body */
 body {
     background: url(../images/pexels-bakgrund.jpg.png) no-repeat center center/cover;
     display: flex;
@@ -19,10 +20,17 @@ body {
 .heading {
     color: whitesmoke;
     font-size: 80px;
-    margin: 0;
     text-align: center;
+    padding-top: 20px;
 }
 
+/* heading link to home page */
+.heading, a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* styles for game area */
 .game-area {
     background-color: rgb(33, 32, 32, 0.9);
     color: whitesmoke;
@@ -36,7 +44,7 @@ body {
     padding: 30px;
 }
 
-p {
+.game-area, p {
     padding: 30px;
 }
 
@@ -46,6 +54,7 @@ p {
     padding: 20px;
 }
 
+/* styles for buttons on both pages */
 .buttons {
     display: flex;
     flex-direction: column;
@@ -53,7 +62,13 @@ p {
     
 }
 
+.button a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 #start-btn {
+    color:whitesmoke;
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
