@@ -33,13 +33,17 @@ body {
     align-items: center;
     flex-flow: column;
     border-radius: 20px;
-    padding: 20px;
+    padding: 30px;
+}
 
+p {
+    padding: 30px;
 }
 
 .info {
     text-decoration: none;
     list-style: none;
+    padding: 20px;
 }
 
 .buttons {
