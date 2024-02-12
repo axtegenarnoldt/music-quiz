@@ -54,11 +54,6 @@ body {
     padding: 20px;
 }
 
-/* Instructions */
-.instruction {
-    padding: 20px;
-}
-
 /* styles for buttons on both pages */
 .buttons {
     display: flex;
@@ -87,6 +82,49 @@ body {
     border-radius: 5px;
     border: none;
     background-color: rgb(214, 98, 69);
+}
+
+/* Instructions */
+.instruction {
+    padding: 20px;
+}
+
+/* Styles for play page */
+
+.game-container {
+    background-color: rgb(33, 32, 32, 0.9);
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    flex-flow: column;
+    padding: 20px;
+    
+}
+
+#question-box {
+    color: whitesmoke;
+    font-size: 30px;
+    padding: 10px;
+}
+.btn {
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+}
+
+.control-btn {
+    padding: 20px;
+    gap: 15px;
 }
 
 /* Footer */
