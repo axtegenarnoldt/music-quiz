@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
 }
 
-
+/* styles for Heading */
 .heading {
     color: whitesmoke;
     font-size: 80px;
@@ -54,7 +54,7 @@ body {
     padding: 20px;
 }
 
-/* styles for buttons on both pages */
+/* styles for buttons on index.html and instruction.html */
 .buttons {
     display: flex;
     flex-direction: column;
