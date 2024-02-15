@@ -135,6 +135,28 @@ body {
     display: none;
 }
 
+/* Score area */
+.scoreboard {
+    background-color: rgb(33, 32, 32, 0.9);
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    flex-flow: column;
+    padding: 10px;
+}
+
+.score-text {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+}
+.score {
+    color: rgb(223, 150, 86);
+}
+
+
 /* Footer */
 footer {
     background-color: white;
