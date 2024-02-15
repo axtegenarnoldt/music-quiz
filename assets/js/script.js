@@ -6,6 +6,9 @@ const answerButtonsElement = document.getElementById('answer-btn')
 
 let shuffledQuestions, currentQuestionIndex
 
+let score = 0;
+
+
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
@@ -57,6 +60,8 @@ function selectAnswer(e) {
   // Check if the selected answer is correct
   const correct = selectedDataset.correct;
   if (correct) {
+    score++;
+    document.getElementById('score').innerText = `Score: ${score}`;
     // Logic for when the selected answer is correct
     console.log('Correct Answer!');
     currentQuestionIndex++;
@@ -68,6 +73,7 @@ function selectAnswer(e) {
     setNextQuestion();
   }
 }
+
 
 /*
  * Game Questions
