@@ -38,7 +38,9 @@ function showQuestion(question) {
     answerButtonsElement.appendChild(button)
   })
 }
-
+/**
+ * Removes answer buttons from html whit the new answer buttons.
+ */
 function resetState() {
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
@@ -48,7 +50,23 @@ function resetState() {
 
 
 function selectAnswer(e) {
-  
+  // Get the selected answer
+  const selectedButton = e.target;
+  const selectedDataset = selectedButton.dataset;
+
+  // Check if the selected answer is correct
+  const correct = selectedDataset.correct;
+  if (correct) {
+    // Logic for when the selected answer is correct
+    console.log('Correct Answer!');
+    currentQuestionIndex++;
+    setNextQuestion();
+  } else {
+    // Logic for when the selected answer is incorrect
+    console.log('Incorrect Answer!');
+    currentQuestionIndex++;
+    setNextQuestion();
+  }
 }
 
 /*
