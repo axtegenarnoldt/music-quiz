@@ -5,7 +5,9 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-btn')
 
 let shuffledQuestions, currentQuestionIndex
-
+/**
+ * for scoreboard.
+ */
 let score = 0;
 let wrongAnswer = 0;
 
@@ -17,6 +19,12 @@ nextButton.addEventListener('click', () => {
 })
 
 function startGame() {
+// Reset the score
+score =  0;
+wrongAnswer =  0;
+document.getElementById('score').innerText = `${score}`;
+document.getElementById('wrong').innerText = `${wrongAnswer}`;
+
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
@@ -31,6 +39,7 @@ function setNextQuestion() {
 
 function showQuestion(question) {
   questionElement.innerText = question.question
+  // Shuffle the answer array
   question.answers.forEach(answer => {
     const button = document.createElement('button')
     button.innerText = answer.text
@@ -72,12 +81,10 @@ function selectAnswer(e) {
     score++;
     document.getElementById('score').innerText = `${score}`;
     // Logic for when the selected answer is correct
-    console.log('Correct Answer!');
     currentQuestionIndex++;
     setNextQuestion();
   } else {
     // Logic for when the selected answer is incorrect
-    console.log('Incorrect Answer!');
     wrongAnswer++;
     document.getElementById('wrong').innerText = `${wrongAnswer}`;
     currentQuestionIndex++;
