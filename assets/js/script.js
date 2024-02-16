@@ -57,6 +57,14 @@ function selectAnswer(e) {
   const selectedButton = e.target;
   const selectedDataset = selectedButton.dataset;
 
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    setNextQuestion()
+  } else {
+    startButton.innerText = 'Restart Quiz'
+    startButton.classList.remove('hide')
+    questionElement.innerText = 'Do you want to play again?'
+  }
+
   // Check if the selected answer is correct
   const correct = selectedDataset.correct;
   if (correct) {
