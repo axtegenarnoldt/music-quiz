@@ -73,7 +73,7 @@ body {
     margin: 5px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(214, 98, 69);
+    background-color: rgb(241, 166, 68);
 }
 
 #instructions-btn {
@@ -81,7 +81,7 @@ body {
     margin: 5px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(214, 98, 69);
+    background-color: rgb(241, 166, 68);
 }
 
 /* Instructions */
@@ -92,12 +92,12 @@ body {
 /* Styles for play page */
 
 .game-container {
-    background-color: rgb(33, 32, 32, 0.9);
+    background-color: rgba(26, 25, 25, 0.9);
     margin: 50px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 10px;
     flex-flow: column;
     padding: 20px;
     
@@ -109,8 +109,8 @@ body {
     padding: 10px;
 }
 .btn {
-    background-color: whitesmoke;
-    color: black;
+    background-color: rgb(241, 166, 68);
+    color: rgb(244, 238, 238);
     padding: 20px;
     border-radius: 5px;
     border: none;
@@ -142,7 +142,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 10px;
     flex-flow: column;
     padding: 10px;
 }
@@ -153,7 +153,7 @@ body {
     gap: 15px;
 }
 .score {
-    color: rgb(223, 150, 86);
+    color: rgb(241, 166, 68);
 }
 
 

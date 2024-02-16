@@ -1,3 +1,4 @@
+//allows interaction with html elements
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-box')
@@ -72,7 +73,7 @@ function selectAnswer(e) {
   } else {
     startButton.innerText = 'Restart Quiz'
     startButton.classList.remove('hide')
-    questionElement.innerText = 'Do you want to play again?'
+    questionElement.innerText = 'Play again?'
   }
 
   // Check if the selected answer is correct
