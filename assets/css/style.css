@@ -19,7 +19,7 @@ body {
 /* styles for Heading */
 .heading {
     color: whitesmoke;
-    font-size: 80px;
+    font-size: 100px;
     text-align: center;
     padding-top: 20px;
 }
@@ -32,7 +32,7 @@ body {
 
 /* styles for game area */
 .game-area {
-    background-color: rgb(33, 32, 32, 0.9);
+    background-color: rgb(32, 32, 32, 0.8);
     color: whitesmoke;
     margin: 50px auto;
     text-align: center;
@@ -40,7 +40,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 30px;
 }
 
@@ -73,7 +73,7 @@ body {
     margin: 5px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(241, 166, 68);
+    background-color: rgb(60, 145, 176);
 }
 
 #instructions-btn {
@@ -81,7 +81,7 @@ body {
     margin: 5px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(241, 166, 68);
+    background-color: rgb(60, 145, 176);
 }
 
 /* Instructions */
@@ -92,7 +92,7 @@ body {
 /* Styles for play page */
 
 .game-container {
-    background-color: rgba(26, 25, 25, 0.9);
+    background-color: rgb(32, 31, 31, 0.8);
     margin: 50px auto;
     display: flex;
     justify-content: center;
@@ -109,11 +109,11 @@ body {
     padding: 10px;
 }
 .btn {
-    background-color: rgb(241, 166, 68);
+    background-color: rgb(60, 145, 176);
     color: rgb(244, 238, 238);
     padding: 20px;
     border-radius: 5px;
-    border: none;
+    border: none ;
 }
 
 #start-btn {
@@ -137,7 +137,7 @@ body {
 
 /* Score area */
 .scoreboard {
-    background-color: rgb(33, 32, 32, 0.9);
+    background-color: rgb(33, 32, 32);
     margin: 50px auto;
     display: flex;
     justify-content: center;
@@ -153,7 +153,7 @@ body {
     gap: 15px;
 }
 .score {
-    color: rgb(241, 166, 68);
+    color: whitesmoke;
 }
 
 
