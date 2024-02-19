@@ -25,7 +25,7 @@ body {
 }
 
 /* heading link to home page */
-.heading, a {
+.heading a {
     text-decoration: none;
     color: whitesmoke;
 }
@@ -62,13 +62,13 @@ body {
     
 }
 
-.button a {
+.button, a {
     text-decoration: none;
-    color: whitesmoke;
+    color: rgb(16, 15, 15);
 }
 
 #play-btn {
-    color:whitesmoke;
+    color: rgb(17, 17, 17);
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
@@ -109,17 +109,9 @@ body {
     padding: 10px;
 }
 
-.timer {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: whitesmoke;
-    font-size: 50px;;
-}
 .btn {
     background-color: rgb(60, 145, 176);
-    color: rgb(244, 238, 238);
+    color: rgb(17, 17, 17);
     padding: 20px;
     border-radius: 5px;
     border: none ;
