@@ -4,6 +4,7 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-box')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-btn')
+const timeLeftElement = document.getElementById("time-left")
 
 let shuffledQuestions, currentQuestionIndex
 /**
@@ -11,6 +12,9 @@ let shuffledQuestions, currentQuestionIndex
  */
 let score = 0;
 let wrongAnswer = 0;
+
+let timeLeft;
+let timer;
 
 
 startButton.addEventListener('click', startGame)
@@ -31,15 +35,34 @@ document.getElementById('wrong').innerText = `${wrongAnswer}`;
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
+  startTimer();
 }
+
+function startTimer() {
+    clearInterval(timer);
+    
+    timeLeft =  10; 
+  
+    timer = setInterval(function () {
+      timeLeft--;
+      timeLeftElement.textContent = timeLeft + 's';
+  
+      if (timeLeft <=  0) {
+        clearInterval(timer);
+        setNextQuestion()
+      }
+    },  1000);
+  }
 
 function setNextQuestion() {
-    resetState()
-  showQuestion(shuffledQuestions[currentQuestionIndex])
+        resetState()
+        showQuestion(shuffledQuestions[currentQuestionIndex])
+        startTimer()
 }
 
+ 
 function showQuestion(question) {
-  questionElement.innerText = question.question
+    questionElement.innerText = question.question
   // Shuffle the answer array
   question.answers.forEach(answer => {
     const button = document.createElement('button')
@@ -51,6 +74,7 @@ function showQuestion(question) {
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
   })
+
 }
 /**
  * Removes answer buttons from html whit the new answer buttons.
@@ -74,6 +98,7 @@ function selectAnswer(e) {
     startButton.innerText = 'Restart Quiz'
     startButton.classList.remove('hide')
     questionElement.innerText = 'Play again?'
+    timeLeftElement.style.display = 'none';
   }
 
   // Check if the selected answer is correct
@@ -92,7 +117,6 @@ function selectAnswer(e) {
     setNextQuestion();
   }
 }
-
 
 /*
  * Game Questions

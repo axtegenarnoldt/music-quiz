@@ -108,6 +108,15 @@ body {
     font-size: 30px;
     padding: 10px;
 }
+
+.timer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 50px;;
+}
 .btn {
     background-color: rgb(60, 145, 176);
     color: rgb(244, 238, 238);
