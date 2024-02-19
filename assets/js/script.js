@@ -24,13 +24,13 @@ function startGame() {
 // Reset the score
 score =  0;
 wrongAnswer =  0;
-document.getElementById('score').innerText = `${score}`
-document.getElementById('wrong').innerText = `${wrongAnswer}`
+document.getElementById('score').innerText = `${score}`;
+document.getElementById('wrong').innerText = `${wrongAnswer}`;
 
   startButton.classList.add('hide');
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
+  shuffledQuestions = questions.sort(() => Math.random() - .5);
   currentQuestionIndex = 0;
-  questionContainerElement.classList.remove('hide')
+  questionContainerElement.classList.remove('hide');
   setNextQuestion();
 }
 
@@ -50,8 +50,8 @@ function showQuestion(question) {
     if (answer.correct) {
       button.dataset.correct = answer.correct;
     }
-    button.addEventListener('click', selectAnswer)
-    answerButtonsElement.appendChild(button)
+    button.addEventListener('click', selectAnswer);
+    answerButtonsElement.appendChild(button);
   });
 }
 /**
@@ -60,7 +60,7 @@ function showQuestion(question) {
 function resetState() {
     nextButton.classList.add('hide');
     while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
 }
 
@@ -187,4 +187,4 @@ const questions = [
             { text: 'Joe Satriani', correct: false }
         ]
     }
-]
+];

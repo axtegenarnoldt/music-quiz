@@ -45,6 +45,12 @@ The code prevents the user from selecting multiple answers.
 
 When all questions are answerd the user get's the question to play the quiz again, if the user wants to play again, click the "Restart Quiz" button. Users can see their final scoure on this page.
 
+### Footer
+
+<img src="docs/footer.jpeg" alt="shows footer with socialmedia icons">
+
+The footer shows links to differnt socialmedia platforms.
+
 ## Testing
 
 <ul>
@@ -65,17 +71,57 @@ When all questions are answerd the user get's the question to play the quiz agai
 ## Validator Testing
 <ul>
 <li>index.html</li>
-No errors were returned when passing through the official W3C validator.
+No errors or warnings were returned when passing through the official W3C validator.
 </ul>
 <ul>
-<li>yogastyles.html</li>
-No errors were returned when passing through the official W3C validator..
+<li>instructions.html</li>
+No errors or warnings were returned when passing through the official W3C validator..
 </ul>
 <ul>
-<li>signup.html</li>
-No errors were returned when passing through the official W3C validator.
+<li>play.html</li>
+No errors or warnings were returned when passing through the official W3C validator.
 </ul>
 <ul>
 <li>style.css</li>
-No errors were returned when passing through the official (Jigsaw) validator.
+No errors or warnings were returned when passing through the official (Jigsaw) validator.
+</ul>
+<ul>
+<li>script.js</li>
+No errors were returned when passing through the official (JSHint) validator.
+gives warning "'const' and 'Let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)."
+</ul>
+
+## Accessibility
+
+<img src="docs/lighthouse.jpeg">
+
+
+
+## Deployment
+
+The website was deployd to GitHub pages.
+<ul>
+<li>In the GitHub repository, i clicked to settings.</li>
+<li>On the left side under code and atumation, i clicked on pages.</li>
+<li>From the sourse section i selected "deploy from branch.</li>
+</ul>
+
+## Credits
+
+### Media
+<ul>
+<li>Social media links was taken from the Love Running project.
+</ul>
+
+### Content
+<ul>
+<li>Background image are taken from: <a href=" https://www.pexels.com/sv-se/">Pexels</a></li>
+<li>Background image are taken from: <a href="https://fontawesome.com/search?o=r&m=free">Font Awesome</a></li>
+<li>Background image are taken from: <a href="https://favicon.io/favicon-converter/">Favicon Generator</a></li>
+</ul>
+
+### Inspiration
+
+<ul>
+<li>Web Dev simplified <a href="https://www.youtube.com/results?search_query=web+dev+simplified">Pexels</a></li>
 </ul>
