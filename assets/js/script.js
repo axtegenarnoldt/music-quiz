@@ -36,9 +36,8 @@ document.getElementById('wrong').innerText = `${wrongAnswer}`;
 
 function setNextQuestion() {
     resetState();
-    if (shuffledQuestions[currentQuestionIndex] !== undefined){
   showQuestion(shuffledQuestions[currentQuestionIndex])
-    }
+    
 }
 
 function showQuestion(question) {
@@ -67,34 +66,31 @@ function resetState() {
 
 
 function selectAnswer(e) {
-  // Get the selected answer
-  const selectedButton = e.target;
-  const selectedDataset = selectedButton.dataset;
-
-  if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    setNextQuestion()
-  } else {
-    startButton.innerText = 'Restart Quiz'
-    startButton.classList.remove('hide')
-    questionElement.innerText = 'Play again?'
-  }
-
-  // Check if the selected answer is correct
-  const correct = selectedDataset.correct;
-  if (correct) {
-    score++;
-    document.getElementById('score').innerText = `${score}`;
-    // Logic for when the selected answer is correct
-    currentQuestionIndex++;
-    setNextQuestion();
-  } else {
-    // Logic for when the selected answer is incorrect
-    wrongAnswer++;
-    document.getElementById('wrong').innerText = `${wrongAnswer}`;
-    currentQuestionIndex++;
-    setNextQuestion();
-  }
-}
+        // Get the selected answer
+        let selectedButton = e.target;
+        let selectedDataset = selectedButton.dataset;
+        // Check if the selected answer is correct
+        let correct = selectedDataset.correct;
+        if (correct) {
+            score++;
+            document.getElementById('score').innerText = `${score}`;
+            // Logic for when the selected answer is correct
+            currentQuestionIndex++;
+        } else {
+            // Logic for when the selected answer is incorrect
+            wrongAnswer++;
+            document.getElementById('wrong').innerText = `${wrongAnswer}`;
+            currentQuestionIndex++;
+        }
+        if (currentQuestionIndex >= shuffledQuestions.length) {
+            resetState()
+            startButton.innerText = 'Restart Quiz'
+            startButton.classList.remove('hide')
+            questionElement.innerText = 'Play again?'
+        } else {
+            setNextQuestion();
+        }
+    }
 
 
 /*
