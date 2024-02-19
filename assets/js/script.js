@@ -1,11 +1,11 @@
 //allows interaction with html elements
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const questionContainerElement = document.getElementById('question-box')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-btn')
+const startButton = document.getElementById('start-btn');
+const nextButton = document.getElementById('next-btn');
+const questionContainerElement = document.getElementById('question-box');
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-btn');
 
-let shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex;
 /**
  * for scoreboard.
  */
@@ -13,12 +13,12 @@ let score = 0;
 let wrongAnswer = 0;
 
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
-  currentQuestionIndex++
-  setNextQuestion()
+  currentQuestionIndex++;
+  setNextQuestion();
     
-})
+});
 
 function startGame() {
 // Reset the score
@@ -27,40 +27,40 @@ wrongAnswer =  0;
 document.getElementById('score').innerText = `${score}`;
 document.getElementById('wrong').innerText = `${wrongAnswer}`;
 
-  startButton.classList.add('hide')
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
-  currentQuestionIndex = 0
-  questionContainerElement.classList.remove('hide')
-  setNextQuestion()
+  startButton.classList.add('hide');
+  shuffledQuestions = questions.sort(() => Math.random() - .5);
+  currentQuestionIndex = 0;
+  questionContainerElement.classList.remove('hide');
+  setNextQuestion();
 }
 
 function setNextQuestion() {
     resetState();
-  showQuestion(shuffledQuestions[currentQuestionIndex])
+  showQuestion(shuffledQuestions[currentQuestionIndex]);
     
 }
 
 function showQuestion(question) {
-  questionElement.innerText = question.question
+  questionElement.innerText = question.question;
   // Shuffle the answer array
   question.answers.forEach(answer => {
-    const button = document.createElement('button')
-    button.innerText = answer.text
-    button.classList.add('btn')
+    const button = document.createElement('button');
+    button.innerText = answer.text;
+    button.classList.add('btn');
     if (answer.correct) {
-      button.dataset.correct = answer.correct
+      button.dataset.correct = answer.correct;
     }
-    button.addEventListener('click', selectAnswer)
-    answerButtonsElement.appendChild(button)
-  })
+    button.addEventListener('click', selectAnswer);
+    answerButtonsElement.appendChild(button);
+  });
 }
 /**
  * Removes answer buttons from html whit the new answer buttons.
  */
 function resetState() {
-    nextButton.classList.add('hide')
-    while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    nextButton.classList.add('hide');
+    while (answerButtonsElement.firstChild); {
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
 }
 
@@ -83,10 +83,10 @@ function selectAnswer(e) {
             currentQuestionIndex++;
         }
         if (currentQuestionIndex >= shuffledQuestions.length) {
-            resetState()
-            startButton.innerText = 'Restart Quiz'
-            startButton.classList.remove('hide')
-            questionElement.innerText = 'Play again?'
+            resetState();
+            startButton.innerText = 'Restart Quiz';
+            startButton.classList.remove('hide');
+            questionElement.innerText = 'Play again?';
         } else {
             setNextQuestion();
         }
@@ -187,4 +187,4 @@ const questions = [
             { text: 'Joe Satriani', correct: false }
         ]
     }
-]
+];
