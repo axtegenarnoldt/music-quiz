@@ -110,7 +110,7 @@ The website was deployd to GitHub pages.
 
 ### Media
 <ul>
-<li>Social media links was taken from the Love Running project.
+<li>Social media links are taken from the Love Running project.
 </ul>
 
 ### Content
