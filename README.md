@@ -16,3 +16,17 @@ The landing page has a welcome section with information about the Quiz, A start 
 <img src="docs/instruction.jpeg..png" alt="Instructions page of the website">
 
 On the instructions page the player can read the istructions on how to play the music quiz. If the player is ready to plat they click on the start music quiz button. If they want to go back tp the landing page they click on the "Music Quiz" heading.
+
+### Game area
+
+<img src="docs/quiz.jpeg" alt="Play page of the website">
+
+For each question the player get's four answer options to choose from. once user selects one of the answers the scoreboard updates with correct or incorrect and shows next question.
+
+The code prevents the user from selecting multiple answers.
+
+### End screen
+
+<img src="docs/final.jpeg" alt="Final page of the website">
+
+When all questions are answerd the user get's the question to play the quiz again, if the user wants to play again, click the "Restart Quiz" button. Users can see their final scoure on this page.
