@@ -35,8 +35,10 @@ document.getElementById('wrong').innerText = `${wrongAnswer}`;
 }
 
 function setNextQuestion() {
-    resetState()
+    resetState();
+    if (shuffledQuestions[currentQuestionIndex] !== undefined){
   showQuestion(shuffledQuestions[currentQuestionIndex])
+    }
 }
 
 function showQuestion(question) {
