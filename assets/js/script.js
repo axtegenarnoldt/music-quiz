@@ -43,7 +43,8 @@ function setNextQuestion() {
  clearInterval(timerInterval);
  timeLeft = 10;
  document.getElementById('timer').textContent = timeLeft;
-    resetState();
+    
+ resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
     
 }
@@ -90,6 +91,11 @@ function resetState() {
     }
 }
 
+function hideTimer() {
+    let timerElement = document.getElementById('timer');
+    timerElement.style.display = 'none'; // Hide the timer element
+}
+
 
 function selectAnswer(e) {
         // Get the selected answer
@@ -109,6 +115,8 @@ function selectAnswer(e) {
             currentQuestionIndex++;
         }
         if (currentQuestionIndex >= shuffledQuestions.length) {
+            clearInterval(timerInterval);
+            hideTimer();
             resetState();
             startButton.innerText = 'Restart Quiz';
             startButton.classList.remove('hide');
