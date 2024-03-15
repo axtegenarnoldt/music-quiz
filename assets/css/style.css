@@ -136,6 +136,17 @@ body {
     display: none;
 }
 
+#timer {
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 40px;
+    font-family: 'karla';
+}
+
 /* Score area */
 .scoreboard {
     background-color: rgb(33, 32, 32);
