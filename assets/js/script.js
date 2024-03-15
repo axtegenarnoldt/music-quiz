@@ -6,11 +6,14 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-btn');
 
 let shuffledQuestions, currentQuestionIndex;
-/**
- * for scoreboard.
- */
+
+// For scoreboard
 let score = 0;
 let wrongAnswer = 0;
+
+// For timer
+let timeLeft = 10;
+let timerInterval;
 
 
 startButton.addEventListener('click', startGame);
@@ -32,9 +35,14 @@ document.getElementById('wrong').innerText = `${wrongAnswer}`;
   currentQuestionIndex = 0;
   questionContainerElement.classList.remove('hide');
   setNextQuestion();
+  startTimer();
 }
 
 function setNextQuestion() {
+    // Clear the timer interval
+ clearInterval(timerInterval);
+ timeLeft = 10;
+ document.getElementById('timer').textContent = timeLeft;
     resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
     
@@ -53,7 +61,25 @@ function showQuestion(question) {
     button.addEventListener('click', selectAnswer);
     answerButtonsElement.appendChild(button);
   });
+  // Starts timer for question
+  startTimer();
 }
+
+
+function startTimer() {
+    timerInterval = setInterval(function() {
+        timeLeft--;
+        document.getElementById('timer').textContent = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            // Trigger action when time is up, e.g., move to next question or end quiz
+            // Example: Move to the next question
+            currentQuestionIndex++;
+            setNextQuestion();
+        }
+    }, 1000);
+}
+
 /**
  * Removes answer buttons from html whit the new answer buttons.
  */
