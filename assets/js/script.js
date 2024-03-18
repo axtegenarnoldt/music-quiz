@@ -11,6 +11,9 @@ let shuffledQuestions, currentQuestionIndex;
 let score = 0;
 let wrongAnswer = 0;
 
+let timeLeft = 10;
+let timerInterval;
+
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -20,29 +23,31 @@ nextButton.addEventListener('click', () => {
 });
 
 function startTimer() {
-    time = 10;
-    timeCount.textContent = time;
+    timeLeft = 10;
+    document.getElementById('timer').textContent = timeLeft; 
     clearInterval(timerInterval);
-    timerInterval = setInterval(()=> {
-        if (time <= 0) {
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        document.getElementById('timer').textContent = timeLeft;
+        if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            wrongAnswer = wrongAnswer + 1;
+            wrongAnswer++;
             document.getElementById('wrong').textContent = wrongAnswer;
             
-            if (currentQuestionIndex < question.length -1) {
+            if (currentQuestionIndex < shuffledQuestions.length - 1) {
                 currentQuestionIndex++;
-                showQuestion();
+                setNextQuestion();
                 startTimer();
             } else {
-                time--;
-                timeCount.textContent = time;
+                
             }
         }
     }, 1000);
 }
 
 function startGame() {
-// Reset the score
+    startTimer();
+ // Reset the score
 score =  0;
 wrongAnswer =  0;
 document.getElementById('score').innerText = `${score}`;
