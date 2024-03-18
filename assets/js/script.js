@@ -12,27 +12,8 @@ let score = 0;
 let wrongAnswer = 0;
 
 // For timer
-let timeLeft = 10;
-let timerInterval;
 
-// Starts timer when quiz starts.
-function startTimer() {
-    timerInterval = setInterval(function() {
-        timeLeft--;
-        document.getElementById('timer').textContent = timeLeft;
-        if (timeLeft <= 0) {
-            clearInterval(timerInterval);
-            
-            currentQuestionIndex++;
-            setNextQuestion();
-        }
-    }, 1000);
-}
 
-// Stops timer when quiz ends
-function stopTimer() {
-    clearInterval(timerInterval);
-}
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -53,17 +34,13 @@ document.getElementById('wrong').innerText = `${wrongAnswer}`;
   currentQuestionIndex = 0;
   questionContainerElement.classList.remove('hide');
   setNextQuestion();
-  startTimer();
+
+
 }
 
 function setNextQuestion() {
-    // Clear the timer interval
- clearInterval(timerInterval);
- timeLeft = 10;
- document.getElementById('timer').textContent = timeLeft;
-    
  resetState();
-  showQuestion(shuffledQuestions[currentQuestionIndex]);
+ showQuestion(shuffledQuestions[currentQuestionIndex]);
     
 }
 
@@ -81,13 +58,12 @@ function showQuestion(question) {
     answerButtonsElement.appendChild(button);
   });
   // Starts timer for question
-  startTimer();
+  
 }
 
 
 // Removes answer buttons from html whit the new answer buttons.
- 
-function resetState() {
+ function resetState() {
     nextButton.classList.add('hide');
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
@@ -113,13 +89,11 @@ function selectAnswer(e) {
             currentQuestionIndex++;
         }
         if (currentQuestionIndex >= shuffledQuestions.length) {
-            stopTimer();
             resetState();
             startButton.innerText = 'Restart Quiz';
             startButton.classList.remove('hide');
             questionElement.innerText = 'Play again?';
         } else {
-            stopTimer();
             setNextQuestion();
 
         }
