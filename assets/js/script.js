@@ -110,13 +110,16 @@ function selectAnswer(e) {
             currentQuestionIndex++;
         }
         if (currentQuestionIndex >= shuffledQuestions.length) {
+            clearInterval(timerInterval);
             resetState();
             startButton.innerText = 'Restart Quiz';
             startButton.classList.remove('hide');
             questionElement.innerText = 'Play again?';
+           
+
         } else {
             setNextQuestion();
-
+        
         }
     }
 
