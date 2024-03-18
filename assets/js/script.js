@@ -11,9 +11,6 @@ let shuffledQuestions, currentQuestionIndex;
 let score = 0;
 let wrongAnswer = 0;
 
-// For timer
-
-
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -21,6 +18,28 @@ nextButton.addEventListener('click', () => {
   setNextQuestion();
     
 });
+
+function startTimer() {
+    time = 10;
+    timeCount.textContent = time;
+    clearInterval(timerInterval);
+    timerInterval = setInterval(()=> {
+        if (time <= 0) {
+            clearInterval(timerInterval);
+            wrongAnswer = wrongAnswer + 1;
+            document.getElementById('wrong').textContent = wrongAnswer;
+            
+            if (currentQuestionIndex < question.length -1) {
+                currentQuestionIndex++;
+                showQuestion();
+                startTimer();
+            } else {
+                time--;
+                timeCount.textContent = time;
+            }
+        }
+    }, 1000);
+}
 
 function startGame() {
 // Reset the score
@@ -34,8 +53,6 @@ document.getElementById('wrong').innerText = `${wrongAnswer}`;
   currentQuestionIndex = 0;
   questionContainerElement.classList.remove('hide');
   setNextQuestion();
-
-
 }
 
 function setNextQuestion() {
@@ -57,10 +74,8 @@ function showQuestion(question) {
     button.addEventListener('click', selectAnswer);
     answerButtonsElement.appendChild(button);
   });
-  // Starts timer for question
-  
+   
 }
-
 
 // Removes answer buttons from html whit the new answer buttons.
  function resetState() {
@@ -100,9 +115,8 @@ function selectAnswer(e) {
     }
 
 
-/*
- * Game Questions
- */
+// Game Questions
+ 
 const questions = [
     {
         question: 'Who is the lead vocalist of the band U2?',
