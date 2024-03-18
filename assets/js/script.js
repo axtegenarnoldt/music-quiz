@@ -33,7 +33,7 @@ function startTimer() {
             clearInterval(timerInterval);
             wrongAnswer++;
             document.getElementById('wrong').textContent = wrongAnswer;
-            
+            // move to next question or end quiz
             if (currentQuestionIndex < shuffledQuestions.length - 1) {
                 currentQuestionIndex++;
                 setNextQuestion();
@@ -63,6 +63,7 @@ document.getElementById('wrong').innerText = `${wrongAnswer}`;
 function setNextQuestion() {
  resetState();
  showQuestion(shuffledQuestions[currentQuestionIndex]);
+ startTimer();
     
 }
 
