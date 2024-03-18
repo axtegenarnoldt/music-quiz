@@ -15,6 +15,24 @@ let wrongAnswer = 0;
 let timeLeft = 10;
 let timerInterval;
 
+// Starts timer when quiz starts.
+function startTimer() {
+    timerInterval = setInterval(function() {
+        timeLeft--;
+        document.getElementById('timer').textContent = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            
+            currentQuestionIndex++;
+            setNextQuestion();
+        }
+    }, 1000);
+}
+
+// Stops timer when quiz ends
+function stopTimer() {
+    clearInterval(timerInterval);
+}
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -67,33 +85,13 @@ function showQuestion(question) {
 }
 
 
-function startTimer() {
-    timerInterval = setInterval(function() {
-        timeLeft--;
-        document.getElementById('timer').textContent = timeLeft;
-        if (timeLeft <= 0) {
-            clearInterval(timerInterval);
-            // Trigger action when time is up, e.g., move to next question or end quiz
-            // Example: Move to the next question
-            currentQuestionIndex++;
-            setNextQuestion();
-        }
-    }, 1000);
-}
-
-/**
- * Removes answer buttons from html whit the new answer buttons.
- */
+// Removes answer buttons from html whit the new answer buttons.
+ 
 function resetState() {
     nextButton.classList.add('hide');
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
-}
-
-function hideTimer() {
-    let timerElement = document.getElementById('timer');
-    timerElement.style.display = 'none'; // Hide the timer element
 }
 
 
@@ -115,14 +113,15 @@ function selectAnswer(e) {
             currentQuestionIndex++;
         }
         if (currentQuestionIndex >= shuffledQuestions.length) {
-            clearInterval(timerInterval);
-            hideTimer();
+            stopTimer();
             resetState();
             startButton.innerText = 'Restart Quiz';
             startButton.classList.remove('hide');
             questionElement.innerText = 'Play again?';
         } else {
+            stopTimer();
             setNextQuestion();
+
         }
     }
 
