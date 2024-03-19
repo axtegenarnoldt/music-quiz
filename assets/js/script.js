@@ -11,6 +11,7 @@ let shuffledQuestions, currentQuestionIndex;
 let score = 0;
 let wrongAnswer = 0;
 
+// For contdown timer
 let timeLeft = 10;
 let timerInterval;
 
@@ -46,7 +47,7 @@ function startTimer() {
 }
 
 function startGame() {
-    startTimer();
+    startTimer(); // Starts contdown timer
  // Reset the score
 score =  0;
 wrongAnswer =  0;
@@ -115,8 +116,6 @@ function selectAnswer(e) {
             startButton.innerText = 'Restart Quiz';
             startButton.classList.remove('hide');
             questionElement.innerText = 'Play again?';
-           
-
         } else {
             setNextQuestion();
         

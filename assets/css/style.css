@@ -54,11 +54,20 @@ body {
     padding: 20px;
 }
 
+#audio-player {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
 /* styles for buttons on index.html and instruction.html */
 .buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     
 }
 
