@@ -102,7 +102,7 @@ body {
 
 .game-container {
     background-color: rgb(32, 31, 31, 0.8);
-    margin: 50px auto;
+    margin: 30px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,7 +159,7 @@ body {
 /* Score area */
 .scoreboard {
     background-color: rgb(33, 32, 32);
-    margin: 50px auto;
+    margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
