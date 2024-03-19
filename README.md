@@ -17,7 +17,7 @@ Anyone how is intrested in testing their music knowledge.
 The goal is to entertain the user with a fun, challenging and short quiz. If they don't get all answers correct they can restart the quiz and try again to emprove their score.
 
 ### Feauter goals
-Add a timer to the quiz, so that the user only have 10 seconds to answer each question. Add more questions and some music to entertain the user.
+Add more questions and music that plays to every question to entertain the user more.
 
 ## Features
 
@@ -50,6 +50,27 @@ When all questions are answerd the user get's the question to play the quiz agai
 <img src="docs/footer.jpeg" alt="shows footer with socialmedia icons">
 
 The footer shows links to differnt socialmedia platforms.
+
+## New features
+
+### Audio Player
+
+<img src="docs/audioplayer.jpeg" alt="shows audioplayer">
+
+I added an audio player that plays one song that's related to the quiz, so the player can have some backgrund music. For better user experience the user can decide if they want to play or stop the music.
+
+### Contdown Timer
+
+<img src="docs/contdown.jpeg" alt="shows contdown timer">
+
+To make the quiz more fun i added a contdown timer that contsdown from 10 seconds for each question. If the player haven't selected an answer when the timer reaches 0 the quiz shows the next question and increases the incorrect score on the scoreboard.
+
+### Scoreboard
+
+<img src="docs/scoreboard.jpeg" alt="shows new location of scoreboard">
+
+For better user experience i moved the scoreboard higher up one the pages, so it's easy to see on different types of screens.
+
 
 ## Testing
 
