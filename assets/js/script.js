@@ -5,16 +5,14 @@ const questionContainerElement = document.getElementById('question-box');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-btn');
 
-let shuffledQuestions, currentQuestionIndex;
+let shuffledQuestions, currentQuestionIndex; // for quiz questions
 
 // For scoreboard
 let score = 0;
 let wrongAnswer = 0;
-
 // For contdown timer
 let timeLeft = 10;
 let timerInterval;
-
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
