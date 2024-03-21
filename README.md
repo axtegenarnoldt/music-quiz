@@ -137,12 +137,12 @@ The website was deployd to GitHub pages.
 ### Content
 <ul>
 <li>Background image are taken from: <a href=" https://www.pexels.com/sv-se/">Pexels</a></li>
-<li>Background image are taken from: <a href="https://fontawesome.com/search?o=r&m=free">Font Awesome</a></li>
-<li>Background image are taken from: <a href="https://favicon.io/favicon-converter/">Favicon Generator</a></li>
+<li>Fonts are taken from: <a href="https://fontawesome.com/search?o=r&m=free">Font Awesome</a></li>
+<li>Favicon are taken from: <a href="https://favicon.io/favicon-converter/">Favicon Generator</a></li>
 </ul>
 
 ### Inspiration
 
 <ul>
-<li>Web Dev simplified <a href="https://www.youtube.com/results?search_query=web+dev+simplified">Pexels</a></li>
+<li>The JavaScript game structure are inspired from a youtube tutorial video by Web Dev simplified. I changed some of the code to fit my game better and i added a contdown timer and a scoreboard. <a href="https://www.youtube.com/results?search_query=web+dev+simplified">Web Dev Simplified</a></li>
 </ul>
