@@ -136,7 +136,7 @@ The website was deployd to GitHub pages.
 
 ### Content
 <ul>
-<li>Background image are taken from: <a href=" https://www.pexels.com/sv-se/">Pexels</a></li>
+<li>Background image are taken from: <a href="https://www.pexels.com/sv-se/">Pexels</a></li>
 <li>Fonts are taken from: <a href="https://fontawesome.com/search?o=r&m=free">Font Awesome</a></li>
 <li>Favicon are taken from: <a href="https://favicon.io/favicon-converter/">Favicon Generator</a></li>
 </ul>
