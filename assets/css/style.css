@@ -145,6 +145,12 @@ body {
     display: none;
 }
 
+#timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
 #timer {
     color: whitesmoke;
     display: flex;
@@ -154,6 +160,7 @@ body {
     padding: 20px;
     font-size: 40px;
     font-family: 'karla';
+
 }
 
 /* Score area */
