@@ -52,11 +52,14 @@ wrongAnswer =  0;
 document.getElementById('score').innerText = `${score}`;
 document.getElementById('wrong').innerText = `${wrongAnswer}`;
 
-  startButton.classList.add('hide');
+  startButton.classList.add('hide'); // hide start button
   shuffledQuestions = questions.sort(() => Math.random() - .5);
   currentQuestionIndex = 0;
   questionContainerElement.classList.remove('hide');
   setNextQuestion();
+
+  document.getElementById('timer').style.display = 'block'; // Show the timer
+  startTimer(); // Start the timer
 }
 
 function setNextQuestion() {
@@ -111,6 +114,7 @@ function selectAnswer(e) {
         if (currentQuestionIndex >= shuffledQuestions.length) {
             clearInterval(timerInterval);
             resetState();
+            document.getElementById('timer').style.display = 'none';
             startButton.innerText = 'Restart Quiz';
             startButton.classList.remove('hide');
             questionElement.innerText = 'Play again?';
